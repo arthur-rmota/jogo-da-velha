@@ -1,0 +1,80 @@
+* { /* Atribui para todos os itens */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: serif;
+}
+
+body { 
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4ead5;
+}
+
+main { 
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+h1 { 
+    text-align: center;
+}
+
+hr { 
+    font-weight: bold;
+    height: 3px;
+    margin-bottom: 10px;
+    background: black;
+}
+
+.game { 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.game button { 
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 70px;
+    background: #f3f3f3;
+}
+
+.restart {
+  background-color: #ff4d4d; /* vermelho vibrante */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.restart:hover {
+  background-color: #ff1a1a; /* vermelho mais intenso no hover */
+  transform: scale(1.05); /* leve zoom ao passar o mouse */
+}
+
+.restart:active {
+  transform: scale(0.95); /* efeito de clique */
+}
+
+.currentPlayer {
+    text-align: center;
+}
+
+.result { 
+    text-align: center;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    min-height: 2em;
+    margin-bottom: 10px;
+}
