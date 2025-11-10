@@ -17,6 +17,8 @@ main {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    align-items: center;
+    min-height: 500px;
 }
 
 h1 { 
