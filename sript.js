@@ -17,9 +17,11 @@ let positions = [
   [3, 5, 7],
 ];
 
-const jogador1 = localStorage.getItem("jogador1") || "Jogador X";
-const jogador2 = localStorage.getItem("jogador2") || "Jogador O";
+const jog1 = localStorage.getItem("jogador1");
+const jog2 = localStorage.getItem("jogador2");
 
+const jogador1 = jog1.charAt(0).toUpperCase() + jog1.slice(1).toLowerCase();
+const jogador2 = jog2.charAt(0).toUpperCase() + jog2.slice(1).toLowerCase();
 
 function init() {
   gameOver = false;
@@ -75,9 +77,9 @@ function check() {
   for (pos of positions) {
     if (pos.every((item) => items.includes(item))) {
       if (playerLastMove === "X") {
-        resultDisplay.innerHTML = `PARABÉNS ${jogador1.toUpperCase()} VOCÊ GANHOU!`;
+        resultDisplay.innerHTML = `PARABÉNS ${jogador1.toUpperCase()} GANHOU!`;
       } else {
-        resultDisplay.innerHTML = `PARABÉNS ${jogador2.toUpperCase()} VOCÊ GANHOU!`;
+        resultDisplay.innerHTML = `PARABÉNS ${jogador2.toUpperCase()} GANHOU!`;
       }
       gameOver = true;
       return;

@@ -13,6 +13,13 @@ body {
     background-color: #f4ead5;
 }
 
+a {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    margin: 10px;
+}
+
 main { 
     display: flex;
     flex-direction: column;
