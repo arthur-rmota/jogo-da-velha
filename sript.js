@@ -17,11 +17,19 @@ let positions = [
   [3, 5, 7],
 ];
 
+const jogador1 = localStorage.getItem("jogador1") || "Jogador X";
+const jogador2 = localStorage.getItem("jogador2") || "Jogador O";
+
+
 function init() {
   gameOver = false;
   selected = [];
   player = "X";
-  currentPlayer.innerHTML = `JOGADOR DA VEZ: ${player}`;
+  if (player === "X") {
+    currentPlayer.innerHTML = `JOGADOR DA VEZ: ${jogador1}`;
+  } else {
+    currentPlayer.innerHTML = `JOGADOR DA VEZ: ${jogador2}`;
+  }
   resultDisplay.innerHTML = ""; // Limpa o resultado
 
   document.querySelectorAll(".game button").forEach((item) => {
@@ -43,8 +51,16 @@ function newMove(e) {
       check();
     }, 100);
 
-    player = player === "X" ? "O" : "X";
-    currentPlayer.innerHTML = `JOGADOR DA VEZ: ${player}`;
+    if (player === "X") {
+      player = "O"
+    } else {
+      player = "X"
+    }
+    if (player === "X") {
+      currentPlayer.innerHTML = `JOGADOR DA VEZ: ${jogador1}`
+    } else {
+      currentPlayer.innerHTML = `JOGADOR DA VEZ: ${jogador2}`
+    }
   }
 }
 
@@ -58,7 +74,11 @@ function check() {
 
   for (pos of positions) {
     if (pos.every((item) => items.includes(item))) {
-      resultDisplay.innerHTML = `O JOGADOR '${playerLastMove}' GANHOU!`;
+      if (playerLastMove === "X") {
+        resultDisplay.innerHTML = `PARABÉNS ${jogador1.toUpperCase()} VOCÊ GANHOU!`;
+      } else {
+        resultDisplay.innerHTML = `PARABÉNS ${jogador2.toUpperCase()} VOCÊ GANHOU!`;
+      }
       gameOver = true;
       return;
     }

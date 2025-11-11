@@ -1,0 +1,76 @@
+ body {
+     margin: 0;
+     padding: 0;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     background-color: #f4ead5;
+     color: black;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+ }
+
+ .form {
+     background-color: transparent;
+     ;
+     padding: 32px;
+     border-radius: 8px;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+     width: 90%;
+     max-width: 400px;
+     text-align: center;
+ }
+
+ .form h1 {
+     margin-top: 0;
+     margin-bottom: 24px;
+     font-size: 1.8rem;
+     color: #f5b700;
+ }
+
+ .jogadores div {
+     margin-bottom: 18px;
+     text-align: left;
+ }
+
+ label {
+     display: block;
+     margin-bottom: 6px;
+     font-size: .95rem;
+     color: black;
+ }
+
+ input[type="text"] {
+     width: 95%;
+     padding: 10px 12px;
+     border: 1px solid #333;
+     border-radius: 4px;
+     background-color: #d7cbb0;
+     color: black;
+     font-size: 1rem;
+     transition: border-color .3s;
+     display: block;
+     margin: 0 auto;
+ }
+
+ input[type="text"]:focus {
+     border-color: #f5b700;
+     outline: none;
+ }
+
+ .botao {
+     display: inline-block;
+     margin-top: 20px;
+     padding: 12px 24px;
+     background-color: #f5b700;
+     color: #111;
+     text-decoration: none;
+     font-weight: bold;
+     border-radius: 4px;
+     transition: background-color .3s, transform .2s;
+ }
+
+ .botao:hover {
+     background-color: #e4a600;
+     transform: translateY(-2px);
+ }

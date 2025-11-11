@@ -1,34 +1,28 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="style.css" rel="stylesheet">
-  <title>Jogo da Velha by: @arthur.rmota</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha by: @arthur.rmota </title>
+    <link rel="stylesheet" href="styleIndex.css">
 </head>
 
 <body>
-  <main>
-    <h1> Jogo Da Velha </h1>
-    <hr>
-    <div class="game">
-      <button data-i="1"></button>
-      <button data-i="2"></button>
-      <button data-i="3"></button>
-      <button data-i="4"></button>
-      <button data-i="5"></button>
-      <button data-i="6"></button>
-      <button data-i="7"></button>
-      <button data-i="8"></button>
-      <button data-i="9"></button>
-    </div>
-    <h2 class="currentPlayer"></h2>
-    <h2 class="result"></h2> 
-    <button class="restart">REINICIAR</button>
-  </main>
-
-  <script src="sript.js"></script>
+    <div class="form">
+        <div class="jogadores">
+            <div>
+                <label for="nome">Player 1:</label>
+                <input type="text" required id="player1" placeholder="Digite o Nome do Jogador X">
+            </div>
+            <div>
+                <label for="nome">Player 2:</label>
+                <input type="text" required id="player2" placeholder="Digite o Nome do Jogador O">
+            </div>
+            <a href="game.html" class="botao" id="confirmar">Confirmar Jogadores</a>
+        </div>
+        </main>
+<script src="index.js"></script>
 </body>
 
 </html>
