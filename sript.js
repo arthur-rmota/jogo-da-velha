@@ -67,7 +67,13 @@ function newMove(e) {
 }
 
 function check() {
-  let playerLastMove = player === "X" ? "O" : "X";
+  let playerLastMove;
+
+  if(player === "X"){ 
+    playerLastMove = "O";
+  } else { 
+    playerLastMove = "X"
+  }
 
   const items = selected
     .map((item, i) => [item, i])
